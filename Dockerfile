@@ -1,5 +1,5 @@
 # copyright 2017-2018 Regents of the University of California and the Broad Institute. All rights reserved.
-FROM genepattern/genepattern-notebook:19.11.2
+FROM genepattern/genepattern-notebook:19.12
 
 MAINTAINER Edwin Juarez <ejuarez@ucsd.edu>
 
@@ -7,7 +7,7 @@ ENV LANG=C LC_ALL=C
 USER root
 
 #RUN conda install -y -c bioconda r-seurat==2.3.4
-RUN conda install -y -c bioconda r-seurat==3.0.2
+#RUN conda install -y -c bioconda r-seurat==3.0.2
 
 #=========================================================================
 #Did not work:

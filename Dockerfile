@@ -21,7 +21,11 @@ USER $NB_USER
 
 # Instructions below
 # build using this (using the same version as seurat for simplicity since this container only adds that):
-# docker build -t edjuaro/docker-seurat:3.0.2 .
+# docker build -t edjuaro/docker-seurat:3.1.0 .
 
 # run using this:
+# docker run --rm -t -p 8888:8888 -e GRANT_SUDO=yes -v $PWD:/Notebooks -w /Notebooks edjuaro/docker-seurat:3.1.0 jupyter-notebook --no-browser --port 8888 --ip=0.0.0.0 --NotebookApp.password='' --NotebookApp.token='' --NotebookApp.password_required=False --allow-root
+
+
+# or
 # docker run --rm -t -p 8888:8888 -e GRANT_SUDO=yes -v $PWD:/Notebooks -w /Notebooks edjuaro/docker-seurat:3.0.2 jupyter-notebook --no-browser --port 8888 --ip=0.0.0.0 --NotebookApp.password='' --NotebookApp.token='' --NotebookApp.password_required=False --allow-root
